@@ -1,0 +1,1312 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0c0d12">
+  <meta name="description" content="MB Mariano Bachiller — Servicios para Eventos. Sonido profesional, iluminación espectacular, estructuras truss y pantallas LED en Argentina.">
+  <title>MB — Mariano Bachiller | Servicios para Eventos</title>
+  <style>
+    /* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 */
+    /* Anti-AI-slop design: honest editorial rhythm, solid ink, zero decorative gimmicks */
+
+    @font-face {
+      font-family: "Barlow Condensed";
+      src: url("assets/fonts/barlow-condensed-600.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 600;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Barlow Condensed";
+      src: url("assets/fonts/barlow-condensed-700.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 700;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: "Inter";
+      src: url("assets/fonts/inter-latin.woff2") format("woff2");
+      font-style: normal;
+      font-weight: 400 600;
+      font-display: swap;
+    }
+
+    :root {
+      color-scheme: dark;
+      --bg: #0c0d12;
+      --bg-surface: #14161f;
+      --bg-card: #181b26;
+      --text: #f4f3ef;
+      --text-muted: #9fa2ab;
+      --text-dim: #6d7280;
+      --accent: #e31e24;
+      --accent-hover: #f02d33;
+      --border: rgba(255, 255, 255, 0.1);
+      --border-strong: rgba(255, 255, 255, 0.2);
+      
+      --font-display: "Barlow Condensed", -apple-system, sans-serif;
+      --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      
+      --gutter: clamp(1.25rem, 5vw, 4rem);
+      --radius: 8px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      overflow-x: clip;
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    img, video {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    button, input, select, textarea {
+      font: inherit;
+      color: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .container {
+      width: min(calc(100% - var(--gutter) * 2), 1140px);
+      margin-inline: auto;
+    }
+
+    /* HEADER */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(12, 13, 18, 0.95);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand img {
+      width: 44px;
+      height: auto;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .brand-desc {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 1rem;
+      background: var(--accent);
+      color: #fff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      border-radius: var(--radius);
+      transition: background 150ms ease;
+    }
+
+    .header-cta:hover {
+      background: var(--accent-hover);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      background: #08090d;
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .hero-media {
+      position: relative;
+      width: 100%;
+      height: clamp(480px, 80vh, 720px);
+    }
+
+    .hero-media picture, .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+    }
+
+    .hero-gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(12, 13, 18, 0.4) 0%,
+        rgba(12, 13, 18, 0.2) 40%,
+        rgba(12, 13, 18, 0.85) 80%,
+        var(--bg) 100%
+      );
+    }
+
+    .hero-body {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding-bottom: clamp(2rem, 5vw, 4rem);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 10vw, 6.2rem);
+      font-weight: 700;
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #ffffff;
+      max-width: 16ch;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-lead {
+      font-size: clamp(1rem, 2.4vw, 1.25rem);
+      color: #e3e2de;
+      max-width: 600px;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .btn-solid {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 50px;
+      padding: 0.85rem 1.75rem;
+      background: var(--accent);
+      color: #ffffff;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: background 150ms ease;
+    }
+
+    .btn-solid:hover {
+      background: var(--accent-hover);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 50px;
+      padding: 0.85rem 1.5rem;
+      background: transparent;
+      color: var(--text);
+      font-size: 0.9rem;
+      font-weight: 600;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-strong);
+      transition: background 150ms ease, border-color 150ms ease;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: #fff;
+    }
+
+    /* CREDIBILITY STRIP */
+    .cred-strip {
+      padding: 1.5rem 0;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .cred-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .cred-item {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .cred-item strong {
+      color: var(--text);
+    }
+
+    .cred-dot {
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    /* SECTIONS */
+    .section {
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-head {
+      margin-bottom: clamp(2rem, 4vw, 3.5rem);
+      max-width: 720px;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 0.96;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-lead {
+      color: var(--text-muted);
+      font-size: clamp(0.95rem, 2vw, 1.15rem);
+      line-height: 1.55;
+    }
+
+    /* CHAPTERS / SERVICES (Alternating Editorial Rhythm) */
+    .chapter-list {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(3rem, 7vw, 6rem);
+    }
+
+    .chapter-item {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    .chapter-visual {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #000;
+      border: 1px solid var(--border);
+    }
+
+    .chapter-visual img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+    }
+
+    .chapter-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .chapter-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .chapter-heading {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 0.98;
+      text-transform: uppercase;
+      color: #ffffff;
+    }
+
+    .chapter-text {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
+
+    .chapter-specs {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+
+    .chapter-specs li::before {
+      content: "— ";
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* FORMATS / USE CASES */
+    .formats-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .format-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .format-card-img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      background: #000;
+    }
+
+    .format-card-body {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      flex: 1;
+    }
+
+    .format-card-type {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .format-card-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1;
+      color: #fff;
+    }
+
+    .format-card-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+
+    /* PROCESS TIMELINE */
+    .process-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .process-card {
+      padding: 1.75rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      position: relative;
+    }
+
+    .process-num {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .process-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .process-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    /* GALLERY */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #000;
+      border: 1px solid var(--border);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      transition: transform 300ms ease;
+    }
+
+    .gallery-caption {
+      padding: 0.85rem 1rem;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.8rem;
+    }
+
+    .gallery-caption strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .gallery-caption span {
+      color: var(--text-dim);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* CONTACT & BUDGET BUILDER */
+    .contact-section {
+      padding: clamp(4rem, 8vw, 7rem) 0;
+      background: var(--bg-surface);
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .contact-info-col h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 7vw, 4.2rem);
+      font-weight: 700;
+      line-height: 0.94;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .contact-info-col p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-direct-card {
+      padding: 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .direct-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+    }
+
+    .direct-name {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .contact-form-col {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: clamp(1.5rem, 5vw, 2.5rem);
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .form-control {
+      width: 100%;
+      min-height: 48px;
+      padding: 0.75rem 0.9rem;
+      background: #0f1118;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      color: #fff;
+      font-size: 0.92rem;
+      transition: border-color 150ms ease;
+    }
+
+    .form-control:focus {
+      border-color: var(--accent);
+      outline: none;
+    }
+
+    textarea.form-control {
+      min-height: 110px;
+      resize: vertical;
+    }
+
+    .form-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .form-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      margin-top: 1.5rem;
+    }
+
+    .btn-wa-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      min-height: 52px;
+      padding: 0.9rem 1.5rem;
+      background: #25d366;
+      color: #fff;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      font-size: 0.92rem;
+      transition: opacity 150ms ease;
+    }
+
+    .btn-wa-action:hover {
+      opacity: 0.92;
+    }
+
+    .btn-copy-action {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-height: 48px;
+      padding: 0.8rem 1.5rem;
+      background: transparent;
+      color: var(--text);
+      font-weight: 600;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .btn-copy-action:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .form-feedback {
+      font-size: 0.82rem;
+      color: #4ade80;
+      min-height: 1.2rem;
+      text-align: center;
+      margin-top: 0.5rem;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      padding: 3.5rem 0;
+      background: #08090d;
+      border-top: 1px solid var(--border);
+      font-size: 0.82rem;
+      color: var(--text-dim);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .footer-top {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .footer-top img {
+      width: 110px;
+      height: auto;
+    }
+
+    .footer-top p {
+      max-width: 440px;
+      line-height: 1.55;
+      color: var(--text-muted);
+    }
+
+    .footer-credits summary {
+      cursor: pointer;
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .footer-credits p {
+      margin-top: 0.5rem;
+      font-size: 0.76rem;
+      line-height: 1.5;
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.75rem;
+    }
+
+    /* TABLET & DESKTOP (700px+) */
+    @media (min-width: 700px) {
+      .cred-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .formats-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .form-grid-2 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .form-actions {
+        flex-direction: row;
+      }
+
+      .form-actions button {
+        flex: 1;
+      }
+    }
+
+    /* DESKTOP (960px+) */
+    @media (min-width: 960px) {
+      .chapter-item {
+        grid-template-columns: 1.2fr 1fr;
+        gap: 3.5rem;
+      }
+
+      .chapter-item:nth-child(even) .chapter-visual {
+        order: 2;
+      }
+
+      .chapter-item:nth-child(even) .chapter-info {
+        order: 1;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr 1.2fr;
+        gap: 4rem;
+      }
+
+      .footer-inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="brand" aria-label="MB Mariano Bachiller — Ir al inicio">
+        <img src="assets/mb-monogram.png" width="700" height="406" alt="Logo MB">
+        <div class="brand-text">
+          <span class="brand-name">Mariano Bachiller</span>
+          <span class="brand-desc">Servicios para Eventos</span>
+        </div>
+      </a>
+
+      <a href="#contacto" class="header-cta">
+        <span>Cotizar</span>
+        <span>↗</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <!-- HERO SECTION (Mobile-First Picture Element) -->
+    <section class="hero">
+      <div class="hero-media">
+        <picture>
+          <source media="(max-width: 680px)" srcset="assets/demo-media/optimized/hero-stage-mobile.webp">
+          <img src="assets/demo-media/optimized/concert-lighting.webp" width="1600" height="576" alt="Escenario y producción técnica de iluminación en vivo" fetchpriority="high">
+        </picture>
+        <div class="hero-gradient"></div>
+      </div>
+
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="hero-title">
+            La técnica detrás de un evento que se recuerda.
+          </h1>
+          <p class="hero-lead">
+            Diseñamos, montamos y operamos sonido profesional, iluminación espectacular, estructuras truss y video para que vos te concentres en disfrutar tu evento.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#contacto" class="btn-solid">Armar consulta por WhatsApp ↗</a>
+            <a href="#disciplinas" class="btn-outline">Conocer servicios y equipos ↓</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDIBILITY & PROOF STRIP -->
+    <section class="cred-strip">
+      <div class="container">
+        <div class="cred-grid">
+          <div class="cred-item">
+            <span class="cred-dot">●</span>
+            <span><strong>Equipamiento 100% propio:</strong> Sin intermediarios ni demoras.</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-dot">●</span>
+            <span><strong>Operadores en vivo:</strong> Asistencia técnica durante todo el evento.</span>
+          </div>
+          <div class="cred-item">
+            <span class="cred-dot">●</span>
+            <span><strong>Montaje anticipado:</strong> Pruebas de sonido y calibración a tiempo.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 MAIN DISCIPLINES (Editorial Pacing) -->
+    <section class="section" id="disciplinas">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Cuatro disciplinas. Una misma puesta técnica.</h2>
+          <p class="section-lead">
+            Cuando sonido, luces, soporte y visuales se coordinan desde un solo equipo, se eliminan imprevistos y se logra una experiencia contundente.
+          </p>
+        </div>
+
+        <div class="chapter-list">
+          <!-- 01 SONIDO -->
+          <article class="chapter-item">
+            <div class="chapter-visual">
+              <img src="assets/demo-media/optimized/sound-console-live.webp" width="1600" height="900" loading="lazy" alt="Operación de sonido en consola digital frente a escenario">
+            </div>
+            <div class="chapter-info">
+              <span class="chapter-tag">01 / Sonido Profesional</span>
+              <h3 class="chapter-heading">Claridad total en voces y potencia musical en pista.</h3>
+              <p class="chapter-text">
+                Sistemas Line Array de tiro largo y corto para cobertura homogénea en todo el espacio. Consolas digitales con procesamiento multicanal, microfonía inalámbrica UHF de alta fidelidad y monitoreo en vivo para que cada palabra y nota se escuchen con precisión.
+              </p>
+              <ul class="chapter-specs">
+                <li>Sistemas Line Array autoamplificados</li>
+                <li>Consolas digitales con faders motorizados y escenas</li>
+                <li>Microfonía inalámbrica de mano y corbateros sin acoples</li>
+                <li>Monitoreo de piso y sistemas in-ear para artistas</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 02 ILUMINACIÓN -->
+          <article class="chapter-item">
+            <div class="chapter-visual">
+              <img src="assets/demo-media/optimized/dance-arena.webp" width="1600" height="1066" loading="lazy" alt="Puesta de iluminación con haces de luz móviles y pantallas LED">
+            </div>
+            <div class="chapter-info">
+              <span class="chapter-tag">02 / Iluminación Espectacular</span>
+              <h3 class="chapter-heading">La luz construye el clima y guía la energía del momento.</h3>
+              <p class="chapter-text">
+                Programación de escenas lumínicas sincronizadas para cada instante: elegancia cálida durante la recepción y cena, y explosión de haces, cabezales móviles Beam y efectos especiales en la pista de baile.
+              </p>
+              <ul class="chapter-specs">
+                <li>Cabezales móviles Beam 7R / Spot / Wash con control DMX</li>
+                <li>Bañadores perimetrales LED para arquitectura del salón</li>
+                <li>Humo bajo, hazer y pirotecnia fría (sparklers) para aperturas</li>
+                <li>Operación lumínica en vivo al compás de la música</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 03 ESTRUCTURAS -->
+          <article class="chapter-item">
+            <div class="chapter-visual">
+              <img src="assets/demo-media/optimized/lighting-rig.webp" width="1200" height="900" loading="lazy" alt="Estructura de truss de aluminio para colgado de luces">
+            </div>
+            <div class="chapter-info">
+              <span class="chapter-tag">03 / Estructuras & Escenarios</span>
+              <h3 class="chapter-heading">Soporte seguro, cableado prolijo y orden visual.</h3>
+              <p class="chapter-text">
+                Trusses de aluminio certificados de alta resistencia, torres elevadoras con trabas de seguridad y tarimas antideslizantes. Montajes calculados para resistir cargas de luces y audio sin comprometer la seguridad ni la estética del salón.
+              </p>
+              <ul class="chapter-specs">
+                <li>Trusses de aluminio Q30 certificados</li>
+                <li>Torres elevadoras telescópicas con freno de seguridad</li>
+                <li>Tarimas modulares reforzadas para escenarios y bandas</li>
+                <li>Pórticos de ingreso, fondos de escenario y cabinas DJ</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- 04 VIDEO & PANTALLAS LED -->
+          <article class="chapter-item">
+            <div class="chapter-visual">
+              <img src="assets/demo-media/optimized/corporate-led.webp" width="1600" height="900" loading="lazy" alt="Pantalla LED curva de alta definición en escenario">
+            </div>
+            <div class="chapter-info">
+              <span class="chapter-tag">04 / Video & Pantallas LED</span>
+              <h3 class="chapter-heading">Presencia visual nítida para toda la audiencia.</h3>
+              <p class="chapter-text">
+                Pantallas LED modulares de alta definición (P2.9 y P3.9) para interior y exterior, procesadores 4K Novastar, transmisión de circuito cerrado de cámaras y visuales dinámicas que potencian la escenografía.
+              </p>
+              <ul class="chapter-specs">
+                <li>Pantallas gigantes LED P2.9 y P3.9 de alto brillo</li>
+                <li>Procesadores Novastar y escaladores de video 4K</li>
+                <li>Circuito cerrado de cámaras para retransmisión en directo</li>
+                <li>Soportes de piso y estructuras de colgado a medida</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMATOS / SOLUCIONES POR TIPO DE EVENTO -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Soluciones diseñadas para cada ocasión.</h2>
+          <p class="section-lead">
+            No existe una puesta estándar. Adaptamos el equipamiento y la disposición técnica al tipo de evento, la cantidad de invitados y el salón.
+          </p>
+        </div>
+
+        <div class="formats-grid">
+          <!-- Card 1 -->
+          <article class="format-card">
+            <img class="format-card-img" src="assets/demo-media/optimized/wedding-luxury.webp" width="1600" height="900" loading="lazy" alt="Banquete de bodas con iluminación cálida">
+            <div class="format-card-body">
+              <span class="format-card-type">Social</span>
+              <h3 class="format-card-title">Bodas & Fiestas de 15</h3>
+              <p class="format-card-desc">
+                Cielo estrellado de microleds, ambientación perimetral cálida en cortinados, sonido para ceremonia y cena, y un despliegue de luces móviles y efectos especiales para una pista inolvidable.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="format-card">
+            <img class="format-card-img" src="assets/demo-media/optimized/corporate-led.webp" width="1600" height="900" loading="lazy" alt="Auditorio para conferencias corporativas">
+            <div class="format-card-body">
+              <span class="format-card-type">Institucional</span>
+              <h3 class="format-card-title">Corporativos & Galas</h3>
+              <p class="format-card-desc">
+                Puntualidad estricta, sonido nítido para disertantes sin acoples, microfonía inalámbrica confiable, atril iluminado y pantallas LED de alta tasa de refresco para presentaciones ejecutivas.
+              </p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="format-card">
+            <img class="format-card-img" src="assets/demo-media/optimized/fire-stage-night.webp" width="1600" height="1067" loading="lazy" alt="Escenario nocturno en recital en vivo">
+            <div class="format-card-body">
+              <span class="format-card-type">Masivo</span>
+              <h3 class="format-card-title">Recitales & Festivales</h3>
+              <p class="format-card-desc">
+                Presión sonora de alto impacto con sistemas Line Array volados, consolas FOH y monitores, rider técnico completo para bandas y un espectáculo lumínico programado para el escenario.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA / FOTOGRAFÍA REAL -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">El trabajo en imágenes.</h2>
+          <p class="section-lead">
+            Una muestra de la escala, el orden técnico y los resultados escénicos que construimos para cada producción.
+          </p>
+        </div>
+
+        <div class="gallery-grid">
+          <figure class="gallery-item">
+            <img src="assets/demo-media/optimized/hero-stage-mobile.webp" width="1080" height="1920" loading="lazy" alt="Escenario con torres truss y cabezales móviles">
+            <figcaption class="gallery-caption">
+              <strong>Escenario & Torres de Iluminación</strong>
+              <span>Concierto</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="assets/demo-media/optimized/wedding-luxury.webp" width="1600" height="900" loading="lazy" alt="Salón de fiesta con iluminación perimetral y cielo de luces">
+            <figcaption class="gallery-caption">
+              <strong>Ambientación Perimetral & Pista</strong>
+              <span>Boda de Gala</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="assets/demo-media/optimized/sound-console-live.webp" width="1600" height="900" loading="lazy" alt="Consola digital de audio y operador técnico FOH">
+            <figcaption class="gallery-caption">
+              <strong>Control de Sonido FOH Digital</strong>
+              <span>Operación en Vivo</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="assets/demo-media/optimized/corporate-led.webp" width="1600" height="900" loading="lazy" alt="Pantalla LED curva y escenario de auditorio">
+            <figcaption class="gallery-caption">
+              <strong>Pantalla LED Curva & Escenario</strong>
+              <span>Corporativo</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="assets/demo-media/optimized/dance-arena.webp" width="1600" height="1066" loading="lazy" alt="Pórticos LED y lásers volumétricos">
+            <figcaption class="gallery-caption">
+              <strong>Lásers & Estructuras LED</strong>
+              <span>Show Espectacular</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-item">
+            <img src="assets/demo-media/optimized/lighting-rig.webp" width="1200" height="900" loading="lazy" alt="Montaje de trusses de aluminio con luminarias móviles">
+            <figcaption class="gallery-caption">
+              <strong>Montaje de Trusses & Cabezales Móviles</strong>
+              <span>Infraestructura</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESO DE TRABAJO -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title">Cómo trabajamos, de principio a fin.</h2>
+          <p class="section-lead">
+            Sin improvisaciones el día de la fecha. Seguimos un método claro para garantizar que todo funcione a la perfección.
+          </p>
+        </div>
+
+        <div class="process-grid">
+          <div class="process-card">
+            <span class="process-num">01 / Relevar</span>
+            <h3>Entender el Espacio</h3>
+            <p>Evaluamos el salón o predio, la acústica del lugar, accesos y requerimientos de energía eléctrica.</p>
+          </div>
+
+          <div class="process-card">
+            <span class="process-num">02 / Diseñar</span>
+            <h3>Propuesta a Medida</h3>
+            <p>Definimos la cantidad exacta de equipos de sonido, luces y pantallas optimizando el presupuesto disponible.</p>
+          </div>
+
+          <div class="process-card">
+            <span class="process-num">03 / Montar</span>
+            <h3>Montaje Anticipado</h3>
+            <p>Llegamos horas antes del evento. Realizamos el armado seguro, cableado prolijo y prueba de sonido completa.</p>
+          </div>
+
+          <div class="process-card">
+            <span class="process-num">04 / Operar</span>
+            <h3>Operación en Vivo</h3>
+            <p>Nuestros técnicos permanecen durante todo el evento operando las consolas en tiempo real sin desatender nada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO DIRECTO & ARMADO DE CONSULTA (Cierre Natural del Recorrido) -->
+    <section class="contact-section" id="contacto">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info-col">
+            <h2>Contanos sobre tu próximo evento.</h2>
+            <p>
+              Completá los datos básicos para que podamos evaluar la disponibilidad de la fecha y preparar una propuesta técnica adaptada a tu necesidad.
+            </p>
+            <p>
+              El mensaje se arma en este dispositivo y se envía directamente al WhatsApp de Mariano Bachiller, sin intermediarios.
+            </p>
+
+            <div class="contact-direct-card">
+              <span class="direct-label">Atención Directa</span>
+              <strong class="direct-name">Mariano Bachiller</strong>
+              <span style="font-size:0.85rem; color:var(--text-muted);">Servicios para Eventos · Argentina</span>
+            </div>
+          </div>
+
+          <div class="contact-form-col">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="fEventType">Tipo de evento</label>
+                <select id="fEventType" class="form-control" required>
+                  <option value="Boda / Casamiento">Boda / Casamiento</option>
+                  <option value="Fiesta de 15 Años">Fiesta de 15 Años</option>
+                  <option value="Evento Corporativo o Congreso">Evento Corporativo o Congreso</option>
+                  <option value="Recital / Show en Vivo">Recital / Show en Vivo</option>
+                  <option value="Cumpleaños / Fiesta Privada">Cumpleaños / Fiesta Privada</option>
+                  <option value="Alquiler puntual de equipamiento">Alquiler puntual de equipamiento</option>
+                </select>
+              </div>
+
+              <div class="form-grid-2">
+                <div class="form-group">
+                  <label for="fDate">Fecha estimada</label>
+                  <input type="date" id="fDate" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="fGuests">Invitados estimados</label>
+                  <select id="fGuests" class="form-control">
+                    <option value="Hasta 100 personas">Hasta 100 personas</option>
+                    <option value="100 a 250 personas" selected>100 a 250 personas</option>
+                    <option value="250 a 500 personas">250 a 500 personas</option>
+                    <option value="Más de 500 personas">Más de 500 personas</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="fLocation">Localidad o Salón</label>
+                <input type="text" id="fLocation" class="form-control" placeholder="Ej: Rosario, Santa Fe / Salón de eventos" required>
+              </div>
+
+              <div class="form-group">
+                <label for="fNeeds">¿Qué servicios necesitás cubrir?</label>
+                <input type="text" id="fNeeds" class="form-control" placeholder="Ej: Sonido para cena y baile, luces de pista, pantalla LED..." required>
+              </div>
+
+              <div class="form-group">
+                <label for="fComments">Observaciones adicionales (opcional)</label>
+                <textarea id="fComments" class="form-control" placeholder="Cualquier dato útil: si es al aire libre, horarios aproximados, etc."></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn-wa-action">
+                  <span>💬 Enviar Consulta por WhatsApp</span>
+                </button>
+                <button type="button" id="btnCopyMsg" class="btn-copy-action">
+                  <span>📋 Copiar Mensaje</span>
+                </button>
+              </div>
+              <p id="formFeedback" class="form-feedback" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <img src="assets/mb-logo-transparent.png" width="700" height="394" alt="MB Mariano Bachiller">
+        <p>
+          Producción técnica integral de sonido, iluminación, estructuras y video para eventos que buscan excelencia, potencia y seguridad.
+        </p>
+      </div>
+
+      <div class="footer-credits">
+        <details>
+          <summary>Créditos y licencias de medios demostrativos</summary>
+          <p>
+            Esta maqueta offline utiliza medios demostrativos para fines de presentación. Consultá los autores y licencias en el archivo <a href="CREDITS.md" style="color:var(--text); text-decoration:underline;">CREDITS.md</a>.
+          </p>
+        </details>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© MB Mariano Bachiller — Servicios para Eventos. Todos los derechos reservados.</span>
+      <span>Mockup Offline de Producción</span>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const form = document.getElementById('contactForm');
+      const copyBtn = document.getElementById('btnCopyMsg');
+      const feedback = document.getElementById('formFeedback');
+
+      const buildMessage = () => {
+        const type = document.getElementById('fEventType').value;
+        const date = document.getElementById('fDate').value || 'A definir';
+        const guests = document.getElementById('fGuests').value;
+        const loc = document.getElementById('fLocation').value.trim() || 'A definir';
+        const needs = document.getElementById('fNeeds').value.trim() || 'Sonido e iluminación integral';
+        const comments = document.getElementById('fComments').value.trim();
+
+        let msg = `Hola Mariano, te contacto por un evento para consultar presupuesto y disponibilidad:\n\n`;
+        msg += `• Tipo de Evento: ${type}\n`;
+        msg += `• Fecha estimada: ${date}\n`;
+        msg += `• Lugar / Salón: ${loc}\n`;
+        msg += `• Cantidad de invitados: ${guests}\n`;
+        msg += `• Servicios requeridos: ${needs}\n`;
+        if (comments) {
+          msg += `• Detalles: ${comments}\n`;
+        }
+        msg += `\n¿Podemos conversar sobre la propuesta técnica? ¡Muchas gracias!`;
+        return msg;
+      };
+
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const text = buildMessage();
+          const encoded = encodeURIComponent(text);
+          // WhatsApp direct link ready for mobile
+          window.open(`https://wa.me/?text=${encoded}`, '_blank');
+          if (feedback) {
+            feedback.textContent = '✓ Abriendo WhatsApp con el mensaje armado...';
+          }
+        });
+      }
+
+      if (copyBtn) {
+        copyBtn.addEventListener('click', async () => {
+          const text = buildMessage();
+          try {
+            await navigator.clipboard.writeText(text);
+            if (feedback) {
+              feedback.textContent = '✓ ¡Mensaje copiado al portapapeles!';
+              setTimeout(() => { feedback.textContent = ''; }, 3500);
+            }
+          } catch (err) {
+            if (feedback) feedback.textContent = 'Seleccioná el texto para copiarlo.';
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
